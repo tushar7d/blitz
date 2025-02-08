@@ -1,7 +1,27 @@
+
 function App() {
   return (
     <>
-      <h1 class="text-3xl">Hello world!</h1>
+     
+        <div className=" grid-container">
+
+          <div className="grid-item-half bg-white">
+            <div className="p-3">
+              <h1>one</h1>
+            </div>
+          </div>
+          <div className="grid-item-quarter">
+            <div className="p-3">
+              <h1>one</h1>
+            </div>
+          </div>
+          <div className="grid-item-quarter">
+            <div className="p-3">
+              <h1>one</h1>
+            </div>
+          </div>
+        </div>
+      
     </>
   );
 }

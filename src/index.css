@@ -1,1 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "tailwindcss";
+
+@theme {
+    --font-sans: 'Inter', system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+ 
+  }
+
+h1 {
+  @apply mb-4 text-6xl font-bold text-slate-800;
+}
+
+h2 {
+  @apply mb-3 text-5xl font-semibold text-slate-800;
+}
+
+h3 {
+  @apply mb-2 text-4xl font-semibold text-slate-800;
+}
+
+h4 {
+  @apply mb-2 text-3xl font-medium text-slate-800;
+}
+
+h5 {
+  @apply mb-1 text-2xl font-medium text-slate-800;
+}
+
+h6 {
+  @apply mb-1 text-xl font-medium text-slate-800;
+}
+
+p {
+    @apply text-base text-slate-600;
+}
+
+.grid-container{
+    @apply grid grid-cols-2 md:grid-cols-4 gap-4;
+}
+
+.grid-item-full{
+    @apply col-span-4 min-h-[200px] rounded-lg border border-slate-200;
+}
+
+.grid-item-half{
+    @apply col-span-2 min-h-[200px] rounded-lg border border-slate-200  ;
+}
+
+.grid-item-third{
+    @apply col-span-3 min-h-[200px] rounded-lg border border-slate-200  ;
+}
+
+.grid-item-quarter{
+    @apply col-span-1 min-h-[200px] rounded-lg border border-slate-200  ;
+}
