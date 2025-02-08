@@ -9,8 +9,8 @@ import One from "./pages/one.mdx";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
-      <div className="min-h-screen bg-slate-50">
-        <div className="mx-auto h-full w-full max-w-[1024px] p-4">
+      <div className="">
+        <div className="mx-auto h-full w-full max-w-[1200px] p-4">
           <Routes>
             <Route index path="/" element={<Index />} />
             <Route path="work" element={<Layout />}>

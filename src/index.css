@@ -1,55 +1,100 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "tailwindcss";
 
-@theme {
-    --font-sans: 'Inter', system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
- 
-  }
+@font-face {
+  font-family: Recoleta;
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("/fonts/Recoleta-Light.woff2") format("woff2");
+}
 
+@font-face {
+  font-family: Recoleta;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/Recoleta-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Recoleta;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/Recoleta-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Recoleta;
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fonts/Recoleta-SemiBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Recoleta;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/Recoleta-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: Recoleta;
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("/fonts/Recoleta-Black.woff2") format("woff2");
+}
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif, "Apple Color Emoji", 
+               "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: "Recoleta", serif;
+  --animate-text: text 5s ease infinite;
+}
+
+@keyframes text {
+  0%, 100% {
+    background-size: 200% 200%;
+    background-position: left center;
+  }
+  50% {
+    background-size: 200% 200%;
+    background-position: right center;
+  }
+}
+
+body {
+  @apply bg-[#111111] text-white;
+}
+
+/* Heading styles */
 h1 {
-  @apply mb-4 text-6xl font-bold text-slate-800;
+  @apply mb-4 text-6xl font-bold;
 }
 
 h2 {
-  @apply mb-3 text-5xl font-semibold text-slate-800;
+  @apply mb-3 text-5xl font-bold;
 }
 
 h3 {
-  @apply mb-2 text-4xl font-semibold text-slate-800;
+  @apply mb-2 text-4xl font-bold;
 }
 
 h4 {
-  @apply mb-2 text-3xl font-medium text-slate-800;
+  @apply mb-2 text-3xl font-bold;
 }
 
 h5 {
-  @apply mb-1 text-2xl font-medium text-slate-800;
+  @apply mb-1 text-2xl font-bold;
 }
 
 h6 {
-  @apply mb-1 text-xl font-medium text-slate-800;
+  @apply mb-1 text-xl font-bold;
 }
 
-p {
-    @apply text-base text-slate-600;
-}
 
-.grid-container{
-    @apply grid grid-cols-2 md:grid-cols-4 gap-4;
-}
 
-.grid-item-full{
-    @apply col-span-4 min-h-[200px] rounded-lg border border-slate-200;
-}
-
-.grid-item-half{
-    @apply col-span-2 min-h-[200px] rounded-lg border border-slate-200  ;
-}
-
-.grid-item-third{
-    @apply col-span-3 min-h-[200px] rounded-lg border border-slate-200  ;
-}
-
-.grid-item-quarter{
-    @apply col-span-1 min-h-[200px] rounded-lg border border-slate-200  ;
-}
